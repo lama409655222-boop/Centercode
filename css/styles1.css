@@ -1,0 +1,419 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.3s ease; /* تقليل الوقت ليكون التفاعل أسرع وأجمل */
+    scroll-behavior: smooth;
+    font-family: sans-serif; /* إضافة خط مريح للعين */
+
+}
+
+
+html,body{
+    width: 100%;
+}
+html{
+    font-size: 62.52%;
+}
+body{
+    background-color: var(--background);
+    color: var(--text-main);
+}
+:root {
+    --primary-blue: #203064;    /* الأزرق الداكن للنصوص والعناوين */
+    --highlight-orange: #f2aa4c; /* البرتقالي المحروق */
+    --bg-light-gray: #b1bec4;  /* الرمادي الفاتح للخلفيات */
+    --pure-white: #ffffff;      /* الأبيض النقي */    /* لون النص العادي الداكن */
+    --text-main: #1e2e64;       /* لون النص العادي الداكن */
+    --text-muted: #757575;      /* الرمادي للنصوص المساعدة */
+    --border-color: #e0e0e0;     /* لون الحدود الخفيفة */
+  --primary-deep-navy: #1a237e; /* الكحلي العميق للشعار والعناوين */
+  --secondary-sky-blue: #00bcd4; /* الأزرق السماوي للأزرار والتفاعلات */
+  --background:#ebebeb;
+    --font-ar: 'Cairo', sans-serif;
+    --font-en: 'Roboto', sans-serif;
+}
+/* قسم البطولة */
+.hero-section {
+    background-color: var(--bg-light-gray);
+    padding: 9rem 9rem 0rem 9rem; /* زيادة padding علوي بسبب الهيدر الثابت */
+}
+
+.hero-container {
+    max-width: 1300px;
+    margin: 0 auto;
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  padding: 7rem 0rem;
+}
+
+.hero-content h1 {
+font-size: 5.2rem;
+  color: var(--primary-blue);
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+
+.hero-content .highlight-text {
+    color: var(--highlight-orange);
+    font-weight: 700;
+}
+
+.hero-content p {
+font-size: 1.7rem;
+  color: #272525;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+     background: linear-gradient(45deg,var(--primary-deep-navy),var(--secondary-sky-blue));;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    position: relative;
+    text-align: left; /* جعل الصورة على اليسار */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    top: 7rem;
+}
+
+.hero-image .shape-bg {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: var(--pure-white);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* قسم ماذا نقدم */
+.what-we-offer {
+    padding: 0px 8rem;
+}
+
+.offer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 3.5rem;
+    color: var(--primary-blue);
+    padding: 2rem;
+}
+
+.section-title p {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.offer-card {
+    background-color:#fff;
+    padding: 30px;
+    border-radius: 15px;
+    transition:  all 0.3s ease;
+    border: 1px solid var(--bg-light-gray);
+    position: relative;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: linear-gradient(45deg,var(--primary-deep-navy),var(--secondary-sky-blue));
+
+}
+.offer-card:hover p{
+    color:white
+}
+.card-icon {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.offer-card .card-icon img{
+    width: 4rem;
+    height: 4rem;;
+    color: white;
+}
+
+.offer-card h3 {
+   font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #273872;
+  font-weight: bold;
+}
+
+.offer-card p {
+font-size: 2rem;
+  line-height: 1.5;
+  color: #373535;
+}
+
+/* --- لجعل التصميم متجاوب --- */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-image {
+        text-align: center;
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* العناوين العامة */
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.why-choose {
+    padding: 2rem 0;
+}
+
+.choose-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.choose-item {
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.icon-holder {
+  background-color: #d3cfcf;
+  width: 15rem;
+  height: 11rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  border: 6px solid #dad3d3;
+}
+
+
+.icon-holder img {
+    max-width:13rem; /* اضبط حجم الأيقونة الحقيقي هنا */
+    height: auto;
+}
+
+.icon-label {
+display: inline-block;
+  background-color: #f2aa4c;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem 5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* --- قسم: ماذا يقول طلابنا (آراء الطلاب) --- */
+.testimonials {
+    padding: 100px 0;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testimonial-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    max-width: 220px; /* البطاقات نحيفة كما في التصميم */
+}
+
+.student-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden; /* لقص الصورة بشكل دائري */
+    margin: 0 auto 25px auto;
+    border: 3px solid var(--border-color); /* إطار اختياري */
+}
+
+.student-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لضمان ملء الصورة بشكل جيد */
+}
+
+.testimonial-text {
+font-size: 1.2rem;
+  line-height: 1.6;
+  color: #434343;
+  max-width: 14rem;
+}
+
+/* --- لجعل التصميم متجاوب --- */
+@media (max-width: 992px) {
+    .choose-grid {
+        flex-wrap: wrap; /* السماح للعناصر بالنزول في سطر جديد */
+    }
+    
+    .testimonials-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .choose-grid {
+        gap: 30px;
+    }
+
+    .testimonial-item {
+        max-width: 300px; /* تكبير البطاقات قليلاً على الموبايل */
+    }
+}
+:root {
+    --navy-blue: #1c2b5c; /* اللون الكحلي للأزرار والعناوين */
+    --text-gray: #666666; /* لون نصوص الوصف */
+    --white: #ffffff;
+    --bg-light: #f9f9f9;
+}
+
+
+
+.section-title {
+    font-size: 3.5rem;
+    color: var(--navy-blue);
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.course-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* ظل ناعم للبطاقة */
+    transition: transform 0.3s ease;
+    text-align: left; /* نصوص الكروت لليسار كما في الصورة */
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 1.5rem;
+    display: flex;
+  flex-direction: column;
+
+}
+
+.course-info h3 {
+    font-size: 1.8rem;
+    color: var(--navy-blue);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.course-info p {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    height: 65px; /* لتوحيد ارتفاع النصوص */
+}
+
+.view-btn {
+    display: inline-block;
+    background-color: var(--navy-blue);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.view-btn:hover {
+    background-color: #384876;
+}
+
+/* التجاوب للموبايل */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
